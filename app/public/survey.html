@@ -7,44 +7,159 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FriendFinder-Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel='stylesheet/css' href='./assets/css/reset.css'>
-    <link rel='stylesheet/css' href='./assets/css/style.css'>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style> body { background-color: rgba(214, 214, 214, 0.425); }</style>
+
 
 
 </head>
 
 <body>
-    <div class='container'>
+    <div class="container">
 
         <h1>Survey Questions</h1>
-        <hr>
+        <hr class="style2">
         <br>
         <h2>About You</h2>
         <form>
             <div class="form-group">
                 <label for="nameField">Name (required)</label>
                 <input type="name" class="form-control" id="nameField" aria-describedby="name">
+                <br>
 
                 <div class="form-group">
                     <label for="photoLink">Link to a photo of you (required)</label>
                     <input type="photolink" class="form-control" id="photoLinkField"
                         aria-describedby="photoLink">
                 </div>
-                <hr>
+                <hr class="style1">
+                <h3>Question 1</h3>
+                <h4>I am very comfortable verbalizing disagreement in a group.</h4>
                 <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>Select an Option</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="custom-select" id="q1">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 2</h3>
+                <h4>I enjoy being the center of attention.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q2">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 3</h3>
+                <h4>I enjoy going to sporting events and concerts.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q3">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 4</h3>
+                <h4>I prefer to spend time with a few friends rather than a large group.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q4">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 5</h3>
+                <h4>I enjoy travel, especially to foreign countries.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q5">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 6</h3>
+                <h4>I enjoy going on vacation where there are lots of people.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q6">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 7</h3>
+                <h4>I am not afraid to try new things, even something I would not be good at.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q7">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 8</h3>
+                <h4>I like to read books rather than watch movies.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q8">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 9</h3>
+                <h4>I think truth is more important than other people's feelings.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q9">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <h3>Question 10</h3>
+                <h4>Religion is very important to me.</h4>
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="q10">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
 
                 <br>
+                <hr class="style2">
+
                 <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 

@@ -1,12 +1,30 @@
-html {
-    font-family: 'Segoe UI',
-        Tahoma,
-        Geneva,
-        Verdana,
-        sans-serif;
-
+h1,
+h2,
+h3 {
+    color: darkblue;
+    font-weight: bold;
 }
 
-h1 {
-    color: limegreen;
+
+hr {
+    color: black;
+}
+
+hr.style1 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+
+hr.style1:after {
+    content: '';
+    display: block;
+    margin-top: 2px;
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+
+hr.style2 {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }

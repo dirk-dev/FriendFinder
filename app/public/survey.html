@@ -12,12 +12,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <style> body { background-color: rgba(214, 214, 214, 0.425); }</style>
+    <style>
+        body {
+        background-color: rgba(214, 214, 214, 0.425);
+    }
+</style>
+
+
+
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="questionsDiv">
 
         <h1>Survey Questions</h1>
         <hr class="style2">
@@ -25,16 +32,16 @@
         <h2>About You</h2>
         <form>
             <div class="form-group">
-                <label for="nameField">Name (required)</label>
-                <input type="name" class="form-control" id="nameField" aria-describedby="name">
+                <label for="name">Name (required)</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name">
                 <br>
 
                 <div class="form-group">
-                    <label for="photoLink">Link to a photo of you (required)</label>
-                    <input type="photolink" class="form-control" id="photoLinkField"
-                        aria-describedby="photoLink">
+                    <label for="photo">Link to a photo of you (required)</label>
+                    <input type="text" class="form-control" id="photo" aria-describedby="photoLink">
                 </div>
                 <hr class="style1">
+
                 <h3>Question 1</h3>
                 <h4>I am very comfortable verbalizing disagreement in a group.</h4>
                 <div class="input-group mb-3">
@@ -162,6 +169,52 @@
         </form>
 
     </div>
+
+    <script type="text/javascript">
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Here we grab the form elements
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+                ]
+            };
+
+            console.log(newFriend);
+
+            $.post("../data/friends.js", newFriend,
+                function (data) {
+
+                    console.log(newFriend);
+
+                    // Clear the form when submitting
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("#q1").val("");
+                    $("#q2").val("");
+                    $("#q3").val("");
+                    $("#q4").val("");
+                    $("#q5").val("");
+                    $("#q6").val("");
+                    $("#q7").val("");
+                    $("#q8").val("");
+                    $("#q9").val("");
+                    $("#q10").val("");
+                });
+        });
+    </script>
 </body>
 
 </html>

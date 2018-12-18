@@ -1,10 +1,13 @@
+#questionsDiv {
+    background-color: rgba(214, 214, 214, 0.425);
+}
+
 h1,
 h2,
 h3 {
     color: darkblue;
     font-weight: bold;
 }
-
 
 hr {
     color: black;

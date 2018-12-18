@@ -431,8 +431,8 @@
         ]
     },
     {
-        "name": "DIrk",
-        "photo": "www.photo.com",
+        "name": "Dirk",
+        "photo": "www.nopixplease.com",
         "scores": [
             "3",
             "3",

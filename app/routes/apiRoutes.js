@@ -7,7 +7,23 @@ module.exports = function (app) {
     });
 
     app.post("/data/friends", function (req, res) {
-        res.json(friends);
+        var newFriend = req.body;
+        var totalDifference = 1000;
+        var currentDifference = 0;
+        var bestMatch;
+
+        for (let i = 0; i < friends.length; i++) {
+            var currentFriend = friends[i];
+            currentDifference = 0;
+            for (let j = 0; j < currentFriend.scores.length; j++) {
+                currentDifference += Math.abs(currentFriend.scores[j] - newFriend.scores[j]);
+            }
+            if (currentDifference < totalDifference) {
+                bestMatch = currentFriend;
+                totalDifference = currentDifference;
+            }
+        }
+        res.json(bestMatch);
     });
 
 };

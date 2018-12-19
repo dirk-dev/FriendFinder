@@ -1,7 +1,5 @@
 var friends = require("../data/friends");
 
-
-
 module.exports = function (app) {
 
     app.get("/data/friends", function (req, res) {
@@ -11,6 +9,5 @@ module.exports = function (app) {
     app.post("/data/friends", function (req, res) {
         res.json(friends);
     });
-
 
 };

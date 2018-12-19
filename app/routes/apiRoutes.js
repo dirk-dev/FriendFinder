@@ -12,9 +12,11 @@ module.exports = function (app) {
         var currentDifference = 0;
         var bestMatch;
 
+        //loops through the array of friends objects
         for (let i = 0; i < friends.length; i++) {
             var currentFriend = friends[i];
             currentDifference = 0;
+            //loops through the array of answers in each friend
             for (let j = 0; j < currentFriend.scores.length; j++) {
                 currentDifference += Math.abs(currentFriend.scores[j] - newFriend.scores[j]);
             }
@@ -24,6 +26,8 @@ module.exports = function (app) {
             }
         }
         res.json(bestMatch);
+        console.log(bestMatch);
+        alert(bestMatch);
     });
 
 };

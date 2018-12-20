@@ -26,8 +26,6 @@ module.exports = function (app) {
             }
         }
         res.json(bestMatch);
-        console.log(bestMatch);
-        alert(bestMatch);
     });
 
 };

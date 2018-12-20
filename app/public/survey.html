@@ -20,25 +20,24 @@
 
         <h1>Survey Questions</h1>
         <hr class="style2">
-        <br>
         <h2>About You</h2>
+        <!-- added validation -->
         <form>
             <div class="form-group">
-                <label for="name">Name (required)</label>
-                <input type="text" class="form-control" id="name">
-                <br>
+                <label for="validationDefault01">Name (required)</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
-
             <div class="form-group">
-                <label for="photo">Link to a photo of you (required)</label>
-                <input type="text" class="form-control" id="photo">
+                <label for="validationDefault02">Link to a photo of you</label>
+                <input type="text" class="form-control" id="photo" required>
             </div>
             <hr class="style1">
 
             <h3>Question 1</h3>
             <h4>I am very comfortable verbalizing disagreement in a group.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q1">
+            <div class="form-group">
+                <select class="custom-select" id="q1" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -49,8 +48,9 @@
 
             <h3>Question 2</h3>
             <h4>I enjoy being the center of attention.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q2">
+            <div class="form-group">
+                <select class="custom-select" id="q2" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -61,8 +61,9 @@
 
             <h3>Question 3</h3>
             <h4>I enjoy going to sporting events and concerts.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q3">
+            <div class="form-group">
+                <select class="custom-select" id="q3" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -73,8 +74,9 @@
 
             <h3>Question 4</h3>
             <h4>I prefer to spend time with a few friends rather than a large group.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q4">
+            <div class="form-group">
+                <select class="custom-select" id="q4" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -85,8 +87,9 @@
 
             <h3>Question 5</h3>
             <h4>I enjoy travel, especially to foreign countries.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q5">
+            <div class="form-group">
+                <select class="custom-select" id="q5" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -97,8 +100,9 @@
 
             <h3>Question 6</h3>
             <h4>I enjoy going on vacation where there are lots of people.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q6">
+            <div class="form-group">
+                <select class="custom-select" id="q6" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -108,9 +112,10 @@
             </div>
 
             <h3>Question 7</h3>
-            <h4>I am not afraid to try new things, even something I would not be good at.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q7">
+            <h4>I am not afraid to try new things, even something I may not be good at.</h4>
+            <div class="form-group">
+                <select class="custom-select" id="q7" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -121,8 +126,9 @@
 
             <h3>Question 8</h3>
             <h4>I like to read books rather than watch movies.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q8">
+            <div class="form-group">
+                <select class="custom-select" id="q8" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -133,8 +139,9 @@
 
             <h3>Question 9</h3>
             <h4>I think truth is more important than other people's feelings.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q9">
+            <div class="form-group">
+                <select class="custom-select" id="q9" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -144,9 +151,10 @@
             </div>
 
             <h3>Question 10</h3>
-            <h4>Religion is very important to me.</h4>
-            <div class="input-group mb-3">
-                <select class="custom-select" id="q10">
+            <h4>My friends and family are very important to me.</h4>
+            <div class="form-group">
+                <select class="custom-select" id="q10" required>
+                    <option value="">Please select an answer</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -154,20 +162,21 @@
                     <option value="5">5 (Strongly Agree)</option>
                 </select>
             </div>
-
-            <br>
             <hr class="style2">
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div id="center_button"> <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
 
+        </form>
+        <br>
     </div>
+
 
     <script type="text/javascript">
         $(".submit").on("click", function (event) {
             event.preventDefault();
 
-            // Here we grab the form elements
+            //access the form elements
             var newFriend = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
@@ -185,7 +194,7 @@
                 ]
             };
 
-            console.log(newFriend);
+            alert(newFriend);
 
             $.post("/data/friends", newFriend,
                 function (data) {

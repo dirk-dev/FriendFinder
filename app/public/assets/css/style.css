@@ -10,6 +10,16 @@ html {
     background-color: rgba(214, 214, 214, 0.425);
 }
 
+.btn {
+    width: 50%;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#center_button {
+    text-align: center;
+}
+
 h1,
 h2,
 h3 {

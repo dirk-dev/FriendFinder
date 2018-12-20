@@ -26,6 +26,8 @@ module.exports = function (app) {
             }
         }
         res.json(bestMatch);
+        console.log("we've got a winner!")
+
     });
 
 };

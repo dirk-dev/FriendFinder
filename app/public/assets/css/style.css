@@ -1,18 +1,13 @@
-html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .form-control {
     width: 500px;
 }
 
-#questionsDiv {
-    background-color: rgba(214, 214, 214, 0.425);
-}
-
 h1,
 h2,
-h3 {
+h3,
+.display-4 {
+    font-family: 'Acme',
+        sans-serif;
     color: #337ab7;
     font-weight: bold;
     display: inline;
@@ -25,6 +20,13 @@ h3 {
 
 h4 {
     display: inline;
+    font-family: 'Asap',
+        sans-serif;
+}
+
+p {
+    font-family: 'Asap',
+        sans-serif;
 }
 
 #please-answer {
@@ -56,15 +58,21 @@ hr.style2 {
     margin: 10px;
 }
 
+#questionsDiv {
+    background-color: rgba(214, 214, 214, 0.425);
+}
+
 #modalDiv {
     position: absolute;
-    z-index: 900;
+    z-index: 9999;
     background-color: rgb(8, 8, 8);
     color: white;
     visibility: hidden;
     margin: 0, auto;
-    padding: 10px;
+    padding: 40px;
     font-size: 20px;
+    border-radius: 10px;
+    transition: opacity 400ms ease-in;
 }
 
 #matchName {
@@ -72,19 +80,26 @@ hr.style2 {
     color: whitesmoke;
 }
 
-/* The Close Button */
+/* The Close Button for the modal */
 .close {
     position: absolute;
     top: 15px;
-    right: 35px;
-    color: #f1f1f1;
+    right: 25px;
+    color: #faf9f9;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-
-
+#ghostedBackground {
+    position: absolute;
+    background: rgba(0, 0, 0, .85);
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+    color: red;
+    visibility: hidden;
+}
 
 #form-incomplete {
     color: red;

@@ -71,6 +71,16 @@
                 </select>
             </div>
 
+            <!-- html for modal -->
+            <div id="modalDiv">Your match is: <br>
+                <h1 id="matchName"></h1>
+                <br>
+                <div id="matchPhoto"></div>
+                <span class="close">&times;</span>
+                <!-- <button id="closeMatchDiv">Click to close</button> -->
+
+            </div>
+
             <h3>Question 4</h3>
             <h4>I prefer to spend time with a few friends rather than a large group.</h4>
             <div class="form-group">
@@ -170,7 +180,6 @@
 
         </form>
         <br>
-        <!-- div for modal here -->
     </div>
 
 
@@ -179,8 +188,6 @@
         function elementVisibility(elem, vis) {
             document.getElementById(elem).style.visibility = vis
         }
-
-
 
         $(".test").on("click", function (event) {
             event.preventDefault();
@@ -203,15 +210,16 @@
                 ]
             };
 
-            console.log("NF", newFriend);
+            // console.log("NF", newFriend);
 
             //Object.values turns the returned object into a nested array.
             var dataValArray = Object.values(newFriend);
             console.log('dataValArray:', dataValArray)
 
-            //checks inside the returned nested arrays for unanswered questions
+            //checks inside the returned nested array for unanswered questions
             if (dataValArray.includes("")) {
                 alert("you got a blank here!")
+                //displays div warning that form was not completely filled out
                 elementVisibility("form-incomplete", "visible")
 
             } else if (dataValArray[2].includes("")) {
@@ -225,8 +233,22 @@
                     function (data) {
 
                         if (data) {
-                            console.log(data);
-                            //code for modal goes here
+                            console.log('response data:', data);
+                            elementVisibility("modalDiv", "visible")
+
+                            //code for modal
+                            document.getElementById("matchName").innerHTML = data.name;
+                            document.getElementById("matchPhoto").innerHTML =
+                                "<img src = " + data.photo + ">";
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function () {
+                                elementVisibility("modalDiv", "hidden")
+
+                            }
                         }
 
                         // Clear the form when submitting

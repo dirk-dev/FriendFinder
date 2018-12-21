@@ -56,6 +56,36 @@ hr.style2 {
     margin: 10px;
 }
 
+#modalDiv {
+    position: absolute;
+    z-index: 900;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    visibility: hidden;
+    margin: 0, auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#matchName {
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+
+
 #form-incomplete {
     color: red;
     font-weight: bold;

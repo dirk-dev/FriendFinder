@@ -21,10 +21,10 @@
         <h1>Survey Questions</h1>
         <hr class="style2">
         <h2>About You</h2>
-        <!-- added validation -->
+        <h4 id="please-answer">Please answer all questions</h4>
         <form>
             <div class="form-group">
-                <label>Name (required)</label>
+                <label>Name</label>
                 <input type="text" class="form-control" id="name" required>
             </div>
             <div class="form-group">
@@ -32,7 +32,6 @@
                 <input type="text" class="form-control" id="photo" required>
             </div>
             <hr class="style1">
-
             <h3>Question 1</h3>
             <h4>I am very comfortable verbalizing disagreement in a group.</h4>
             <div class="form-group">
@@ -165,6 +164,7 @@
             <hr class="style2">
 
             <div id="center_button">
+                <div id="form-incomplete">Please fill out all questions before submitting</div>
                 <button class="btn btn-primary test" type="submit">Submit form</button>
             </div>
 
@@ -175,6 +175,13 @@
 
 
     <script>
+        //function to change visibility of html element
+        function elementVisibility(elem, vis) {
+            document.getElementById(elem).style.visibility = vis
+        }
+
+
+
         $(".test").on("click", function (event) {
             event.preventDefault();
 
@@ -198,16 +205,22 @@
 
             console.log("NF", newFriend);
 
-            //Object.values turns the returned object into an array.
+            //Object.values turns the returned object into a nested array.
             var dataValArray = Object.values(newFriend);
             console.log('dataValArray:', dataValArray)
 
             //checks inside the returned nested arrays for unanswered questions
             if (dataValArray.includes("")) {
                 alert("you got a blank here!")
+                elementVisibility("form-incomplete", "visible")
+
             } else if (dataValArray[2].includes("")) {
                 alert("you got an inner blank here!")
+                elementVisibility("form-incomplete", "visible")
+
             } else {
+                elementVisibility("form-incomplete", "hidden")
+
                 $.post("/data/friends", newFriend,
                     function (data) {
 

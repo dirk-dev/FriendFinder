@@ -10,21 +10,26 @@ html {
     background-color: rgba(214, 214, 214, 0.425);
 }
 
-.btn {
-    width: 50%;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-#center_button {
-    text-align: center;
-}
-
 h1,
 h2,
 h3 {
     color: #337ab7;
     font-weight: bold;
+    display: inline;
+}
+
+h3 {
+    line-height: 35px;
+    font-size: 19px;
+}
+
+h4 {
+    display: inline;
+}
+
+#please-answer {
+    font-weight: bold;
+    display: block;
 }
 
 hr {
@@ -45,7 +50,25 @@ hr.style1:after {
 }
 
 hr.style2 {
-    height: 10px;
+    height: 4px;
     border: 0;
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    margin: 10px;
+}
+
+#form-incomplete {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    visibility: hidden;
+}
+
+.btn {
+    width: 50%;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#center_button {
+    text-align: center;
 }

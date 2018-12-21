@@ -165,16 +165,17 @@
             <hr class="style2">
 
             <div id="center_button">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary test" type="submit">Submit form</button>
             </div>
 
         </form>
         <br>
+        <!-- div for modal here -->
     </div>
 
 
     <script>
-        $(".btn").on("click", function (event) {
+        $(".test").on("click", function (event) {
             event.preventDefault();
 
             //access the form elements
@@ -195,29 +196,42 @@
                 ]
             };
 
-            console.log(newFriend);
+            console.log("NF", newFriend);
 
-            $.post("/data/friends", newFriend,
-                function (data) {
+            //Object.values turns the returned object into an array.
+            var dataValArray = Object.values(newFriend);
+            console.log('dataValArray:', dataValArray)
 
-                    if (data) {
-                        console.log(data);
-                    }
+            //checks inside the returned nested arrays for unanswered questions
+            if (dataValArray.includes("")) {
+                alert("you got a blank here!")
+            } else if (dataValArray[2].includes("")) {
+                alert("you got an inner blank here!")
+            } else {
+                $.post("/data/friends", newFriend,
+                    function (data) {
 
-                    // Clear the form when submitting
-                    $("#name").val("");
-                    $("#photo").val("");
-                    $("#q1").val("");
-                    $("#q2").val("");
-                    $("#q3").val("");
-                    $("#q4").val("");
-                    $("#q5").val("");
-                    $("#q6").val("");
-                    $("#q7").val("");
-                    $("#q8").val("");
-                    $("#q9").val("");
-                    $("#q10").val("");
-                });
+                        if (data) {
+                            console.log(data);
+                            //code for modal goes here
+                        }
+
+                        // Clear the form when submitting
+                        $("#name").val("");
+                        $("#photo").val("");
+                        $("#q1").val("");
+                        $("#q2").val("");
+                        $("#q3").val("");
+                        $("#q4").val("");
+                        $("#q5").val("");
+                        $("#q6").val("");
+                        $("#q7").val("");
+                        $("#q8").val("");
+                        $("#q9").val("");
+                        $("#q10").val("");
+                    });
+            }
+
         });
     </script>
 </body>

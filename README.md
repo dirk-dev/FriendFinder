@@ -3,7 +3,7 @@
 ## Summary
 The `FriendFinder` app takes in user input from an web page in the form of an object containing an array and runs logic on it to compare the user values with the prepopulated `friends.json` file of sample friends. The logic iterates through the user object and the sample friends file to compare the scores for each question. 
 
-The closed match (the smallest difference between user & sample file entry for each question) indicates the match between user and potential friend.
+The closest match (the smallest difference between user & sample file entry for each question) indicates the match between user and potential friend.
 
 ## Technical Details
 * A `server.js` file was used as the entry point, and was run in `Node` on the local machine for development & testing. 

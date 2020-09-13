@@ -1,7 +1,5 @@
 # FriendFinder
 
-Deployed app:
-
 ## [FriendFinder deployed app](https://polar-waters-41973.herokuapp.com/)
 
 ---
